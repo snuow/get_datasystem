@@ -14,7 +14,6 @@ def combine_data(data, itemlist):
     df.index = df['date']
     df = df.drop('date', axis=1)
 
-
     return df
 
 
