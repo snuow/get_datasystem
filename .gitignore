@@ -2,3 +2,4 @@ venv/
 etc/
 .idea/
 test/
+*.csv
