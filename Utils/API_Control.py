@@ -4,20 +4,19 @@ import datetime
 import time
 import configparser
 
-LONGITUDE = '34.7289'
-LATITUDE = '135.413'
-UNITS = 'si'
-EXCLUDE = 'currently,minutely,daily,alerts,flags'
-
-# start,end書式：yyyymmdd
-startdate = '20180328'
-enddate = '20180405'
+# # start,end書式：yyyymmdd
+# startdate = '20180328'
+# enddate = '20180405'
 
 inifile = configparser.ConfigParser()
 inifile.read('../etc/init.txt')
 APIKEY = inifile['darksky']['APIKEY']
+LONGITUDE = inifile['darksky']['LONGITUDE']
+LATITUDE = inifile['darksky']['LATITUDE']
+UNITS = inifile['darksky']['UNITS']
+EXCLUDE = inifile['darksky']['EXCLUDE']
 
-print (APIKEY)
+#print (APIKEY)
 
 def get_forecast():
     try:
